@@ -1,0 +1,17 @@
+name: 'Check suppressions'
+author: 'Neolution'
+branding:
+  icon: 'check-circle'
+  color: 'orange'
+description: 'This action check for code analyzer suppressions and add a comment to the pull request'
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github token of the repository (automatically created by Github)'
+    required: true
+  continueOnError:
+    description: 'Whether to continue even if there are errors'
+    required: false
+    default: 'false'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
