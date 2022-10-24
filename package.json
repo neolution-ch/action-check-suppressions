@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "source": "src/index.ts",
   "scripts": {
-    "build": "ncc build src/index.ts -o dist && shx sed -i \"s/\\x0D$//g\" ./dist/index.js",
+    "build": "ncc build src/index.ts --license licenses.txt -o dist && shx sed -i \"s/\\x0D$//g\" ./dist/index.js",
     "prelint": "git ls-files | xargs eclint check",
     "lint": "eslint \"**/*.{ts,tsx}\" --cache --max-warnings 0",
     "upgradeAll": "npm-check-updates --packageFile ./package.json -u"
