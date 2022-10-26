@@ -8,7 +8,7 @@ See [action.yml](action.yml)
 
 ```yaml
 steps:
-- uses: neolution-ch/action-check-suppressions@1
+- uses: neolution-ch/action-check-suppressions@v1
   with:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     continueOnError: false # default
