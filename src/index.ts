@@ -170,6 +170,12 @@ async function run(): Promise<void> {
       } else if (line.includes("eslint-disable")) {
         core.info(`Detected 'eslint-disable' in file '${filename}' at line ${lineNr}`);
         await handleSuppression(line);
+      } else if (line.includes("@ts-expect-error")) {
+        core.info(`Detected '@ts-expect-error' in file '${filename}' at line ${lineNr}`);
+        await handleSuppression(line);
+      } else if (line.includes("@ts-ignore")) {
+        core.info(`Detected '@ts-ignore' in file '${filename}' at line ${lineNr}`);
+        await handleSuppression(line);
       }
 
       lineNr += 1;

@@ -14083,6 +14083,14 @@ function run() {
                     core.info(`Detected 'eslint-disable' in file '${filename}' at line ${lineNr}`);
                     yield handleSuppression(line);
                 }
+                else if (line.includes("@ts-expect-error")) {
+                    core.info(`Detected '@ts-expect-error' in file '${filename}' at line ${lineNr}`);
+                    yield handleSuppression(line);
+                }
+                else if (line.includes("@ts-ignore")) {
+                    core.info(`Detected '@ts-ignore' in file '${filename}' at line ${lineNr}`);
+                    yield handleSuppression(line);
+                }
                 lineNr += 1;
             }
             // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
