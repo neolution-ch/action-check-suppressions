@@ -12,6 +12,10 @@ inputs:
     description: 'Whether to continue even if there are errors'
     required: false
     default: 'false'
+  ignoredPaths:
+    description: 'The list of paths to ignore'
+    required: false
+    default: ''
 runs:
   using: 'node16'
   main: 'dist/index.js'
