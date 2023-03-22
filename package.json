@@ -1,6 +1,6 @@
 {
   "name": "@neolution-ch/action-check-suppressions",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This action check for code analyzer suppressions and add a comment to the pull request",
   "homepage": "https://github.com/neolution-ch/action-check-suppressions",
   "license": "MIT",
