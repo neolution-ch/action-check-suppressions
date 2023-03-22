@@ -14265,7 +14265,8 @@ function run() {
         try {
             const { context } = github;
             if (!context.payload.pull_request) {
-                throw new Error("Needs to be run from a Pull Request");
+                core.info("===> Not a Pull Request, skipping");
+                return;
             }
             const githubToken = core.getInput("GITHUB_TOKEN", { required: true });
             const continueOnError = core.getBooleanInput("continueOnError");
