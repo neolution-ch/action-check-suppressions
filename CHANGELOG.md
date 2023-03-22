@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2023-03-22
+
 ### Changed
 
-- Don't throw an error if it's not a PR
+-   Don't throw an error if it's not a PR
 
 ### Added
 
@@ -28,7 +30,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Initial release
 -   Added flag to include licenses in the output dist folder
 
-[Unreleased]: https://github.com/neolution-ch/action-check-suppressions/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/neolution-ch/action-check-suppressions/compare/1.2.0...HEAD
+
+[1.2.0]: https://github.com/neolution-ch/action-check-suppressions/compare/1.1.0...1.2.0
 
 [1.1.0]: https://github.com/neolution-ch/action-check-suppressions/compare/1.0.0...1.1.0
 
