@@ -2,6 +2,7 @@ import * as core from "@actions/core";
 import * as exec from "@actions/exec";
 import * as github from "@actions/github";
 import * as fs from "fs";
+import { minimatch } from "minimatch";
 
 const allowedCsSuppressions = [
   "CA1310",
@@ -45,6 +46,7 @@ async function run(): Promise<void> {
 
     const githubToken = core.getInput("GITHUB_TOKEN", { required: true });
     const continueOnError = core.getBooleanInput("continueOnError");
+    const ignoredPaths = core.getMultilineInput("ignoredPaths");
     const pullRequestNumber = context.payload.pull_request.number;
 
     const octokit = github.getOctokit(githubToken);
@@ -106,6 +108,13 @@ async function run(): Promise<void> {
     };
 
     const handleSuppression = async (line: string): Promise<void> => {
+      for (const ignoredPath of ignoredPaths) {
+        if (minimatch(filename, ignoredPath)) {
+          core.info("===> File matches the ignored paths");
+          return;
+        }
+      }
+
       if (filename.endsWith("GlobalSuppressions.cs")) {
         core.info("===> Suppression/Pragma allowed in GlobalSuppressions.cs");
         await writePullRequestComment(commentSuppressionWarning);
