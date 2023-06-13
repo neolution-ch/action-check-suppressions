@@ -14245,7 +14245,7 @@ const allowedCsSuppressions = [
 ];
 const allowedTsSuppressions = [
     "@typescript-eslint/naming-convention",
-    "cyclomatic-complexity",
+    "complexity",
     "no-console",
     "no-floating-promises",
     "no-param-reassign",
