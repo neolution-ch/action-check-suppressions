@@ -14253,6 +14253,7 @@ const allowedTsSuppressions = [
     "react/jsx-props-no-spreading",
     "react/no-array-index-key",
     "react/no-unused-prop-types",
+    "react-hooks/exhaustive-deps",
 ];
 const commentPrefix = "[action-check-suppressions]";
 const commentSuppressionWarning = "Suppressions should not be used, please make sure with the Project Team that this suppression is ok.";
