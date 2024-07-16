@@ -14254,7 +14254,6 @@ const allowedTsSuppressions = [
     "react/no-array-index-key",
     "react/no-unused-prop-types",
     "react-hooks/exhaustive-deps",
-    "max-lines",
 ];
 const commentPrefix = "[action-check-suppressions]";
 const commentSuppressionWarning = "Suppressions should not be used, please make sure with the Project Team that this suppression is ok.";

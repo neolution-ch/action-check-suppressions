@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Possibility to suppress "max-lines"
 - Possibility to suppress "react-hooks/exhaustive-deps"
 
 ## [1.4.0] - 2023-07-11
