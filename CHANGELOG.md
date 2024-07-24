@@ -7,10 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2024-07-24
+
 ### Added
 
-- Possibility to suppress "max-lines"
-- Possibility to suppress "react-hooks/exhaustive-deps"
+-   Possibility to suppress "max-lines"
+-   Possibility to suppress "react-hooks/exhaustive-deps"
 
 ## [1.4.0] - 2023-07-11
 
@@ -47,7 +49,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Initial release
 -   Added flag to include licenses in the output dist folder
 
-[Unreleased]: https://github.com/neolution-ch/action-check-suppressions/compare/1.4.0...HEAD
+[Unreleased]: https://github.com/neolution-ch/action-check-suppressions/compare/1.5.0...HEAD
+
+[1.5.0]: https://github.com/neolution-ch/action-check-suppressions/compare/1.4.0...1.5.0
 
 [1.4.0]: https://github.com/neolution-ch/action-check-suppressions/compare/1.3.0...1.4.0
 
