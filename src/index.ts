@@ -138,8 +138,8 @@ async function run(): Promise<void> {
 
       // Create a regex by adding the word boundary around each entry and separate
       // them with the or clause
-      const allowedCsSuppressionsRegex = new RegExp(`\b${allowedCsSuppressions.join("\\b|\\b")}\b`);
-      const allowedTsSuppressionsRegex = new RegExp(`\b${allowedTsSuppressions.join("\\b|\\b")}\b`);
+      const allowedCsSuppressionsRegex = new RegExp(`\\b${allowedCsSuppressions.join("\\b|\\b")}\\b`);
+      const allowedTsSuppressionsRegex = new RegExp(allowedTsSuppressions.join("|").replaceAll('/', '\\/'));
 
       if (allowedCsSuppressionsRegex.test(line) || allowedTsSuppressionsRegex.test(line)) {
         core.info("===> Suppression allowed, add comment to PR");
